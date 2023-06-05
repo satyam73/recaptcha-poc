@@ -19,7 +19,7 @@ export default function Home() {
         }),
       };
 
-      const res = await fetch("/verify", configs);
+      const res = await fetch("https://recaptcha-poc.onrender.com/verify", configs);
       const data = await res.json();
       
       if(!data.status.success){
